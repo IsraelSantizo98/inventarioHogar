@@ -1,0 +1,74 @@
+:root {
+  --iconHeaderColor: #e8ebf0;
+  --borderHeaderColor: #e8ebf0;
+  --borderHeaderBottom: #dee1e8;
+  --headerColor: #fff;
+  --bodyColor: #eff2f6;
+  --menuColor: #262f3c;
+  --menuColorHover: #2e3746;
+  --borderMenuColorHover: #00b0ff;
+  --menuTextColor: #ddd;
+  --icoMenuColor: #8894ab;
+  --icoMenuColorHover: #fcfcfd;
+  --btnColorHover: #5c5b5ba6;
+  --formColor: #fff;
+  /* acacac00 */
+}
+body {
+  background-color: var(--bodyColor);
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: regular;
+}
+.headerContainer {
+  background-color: var(--headerColor);
+  width: 100%;
+  height: 60px;
+}
+.containerForm {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 25px;
+}
+.containerForm form {
+  display: grid;
+  align-items: center;
+  justify-content: stretch;
+  padding: 40px 20px;
+  border-radius: 15px;
+  background-color: var(--formColor);
+  width: 30vw;
+}
+.containerForm form label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 5px;
+}
+.containerForm form label select {
+  width: 200px;
+  border: transparent;
+}
+.containerForm form label input {
+  width: 200px;
+  border: transparent;
+  border-bottom: 1px solid black;
+}
+.containerForm form label input:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+.submitBtn {
+  width: 100%;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  margin-top: 10px;
+  padding: 10px 0px;
+}
+.submitBtn:hover {
+  cursor: pointer;
+  background-color: var(--btnColorHover);
+}
