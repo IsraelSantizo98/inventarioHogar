@@ -1,0 +1,2 @@
+# inventarioHogar
+Inventario del hogar
