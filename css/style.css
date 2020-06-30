@@ -161,6 +161,7 @@ nav li:hover li {
 .contenidoModal {
   background-color: #fff;
   border-radius: 5px;
+  margin-bottom: 40px;
 }
 table {
   border-collapse: collapse;

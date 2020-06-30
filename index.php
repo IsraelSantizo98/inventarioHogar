@@ -29,8 +29,8 @@ include 'php/conexion.php';
           <div class="imgContainer">
             <figure><img src="assets/logo/logo.svg" alt="Logo de la pagina web"></figure>
           </div>
-          <li><a href="#" onclick="mostrarForm1()"></i>Inventario</a></li>
-          <li><a href="#"></i>Productos<i class="icoMenuArrow fas fa-sort-down"></i></a>
+          <li><a href="#"></i>Inventario</a></li>
+          <li><a href="#" onclick="mostrarForm1()"></i>Productos<i class="icoMenuArrow fas fa-sort-down"></i></a>
             <ul>
               <li><span onclick="mostrarForm2()">Insertar producto</span></li>
             </ul>
@@ -60,7 +60,7 @@ include 'php/conexion.php';
     </section>
     <section id="main">
       </form>
-      <div id="containerModal1"class="tableContainerBusqueda">
+      <div id="containerModal1"class="tableContainer">
         <h2>Inventario</h2>
         <div class="contenidoModal">
           <table>
@@ -75,14 +75,17 @@ include 'php/conexion.php';
               <th>Cantidad del producto</th>
               <th>Modificar producto</th>
               <th>Eliminar producto</th>
+              </th>
             </tr>
               <?php 
                 $instruc = "SELECT * FROM productos ORDER BY nombre_producto ASC";
                 $query = mysqli_query($inventario_conexion, $instruc);
                 while($r = mysqli_fetch_assoc($query)){
-                  echo"<tr><td>".$r['id_ubicacion']."</td><td>".$r['nombre_producto']."</td><td>".$r['nota_producto']."</td><td>".$r['fecha_compra']."</td><td>".$r['fecha_caducidad']."</td><td>".$r['precio_compra']."</td><td>".$r['capacidad_producto']."</td><td>".$r['cantidad_producto']."</td><td><a href='php/modificar/actualizaProducto.php?&inventarios=".$r['id_producto']."&nombre_producto=".$r['nombre_producto']."&nota_producto=".$r['nota_producto']."&fecha_compra=".$r['fecha_compra']."&fecha_caducidad=".$r['fecha_caducidad']."&precio_compra=".$r['precio_compra']."&capacidad_producto=".$r['capacidad_producto']."&cantidad_producto=".$r['cantidad_producto']."'>Actualizar</a></td><td><a href='php/eliminar/eliminarProducto.php?&inventarios=".$r['id_producto']."'>Eliminar</a></td></tr>";
+                  echo"<tr><td>".$r['id_ubicacion']."</td><td>".$r['nombre_producto']."</td><td>".$r['nota_producto']."</td><td>".$r['fecha_compra']."</td><td>".$r['fecha_caducidad']."</td><td>".$r['precio_compra']."</td><td>".$r['capacidad_producto']."</td><td>".$r['cantidad_producto']."</td><td><a href='php/modificar/actualizaProducto.php?&inventarios=".$r['id_producto']."&nombre_producto=".$r['nombre_producto']."&nota_producto=".$r['nota_producto']."&fecha_compra=".$r['fecha_compra']."&fecha_caducidad=".$r['fecha_caducidad']."&precio_compra=".$r['precio_compra']."&capacidad_producto=".$r['capacidad_producto']."&cantidad_producto=".$r['cantidad_producto']."'>Actualizar</a></td><td><a href='php/eliminar/eliminarProducto.php?&inventarios=".$r['id_producto']."'>Eliminar</a></td>";
                 }
               ?>
+                
+              
           </table>
         </div>
       </div>
